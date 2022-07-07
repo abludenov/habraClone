@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+<!--    указание признаков уникальных полей в таблицах (где необходимо)-->
+    <changeSet id="1634593933909-40" author="Sobolev Kirill">
+        <addUniqueConstraint columnNames="company_name" constraintName="uc_companies_company_name"
+                             tableName="companies"/>
+    </changeSet>
+    <changeSet id="1634593933909-41" author="Sobolev Kirill">
+        <addUniqueConstraint columnNames="company_site" constraintName="uc_companies_company_site"
+                             tableName="companies"/>
+    </changeSet>
+    <changeSet id="1634593933909-42" author="Sobolev Kirill">
+        <addUniqueConstraint columnNames="utr_number" constraintName="uc_companies_utr_number" tableName="companies"/>
+    </changeSet>
+    <changeSet id="1634593933909-43" author="Sobolev Kirill">
+        <addUniqueConstraint columnNames="roles_names" constraintName="uc_roles_roles_names" tableName="roles"/>
+    </changeSet>
+    <changeSet id="1634593933909-44" author="Sobolev Kirill">
+        <addUniqueConstraint columnNames="title" constraintName="uc_tags_title" tableName="tags"/>
+    </changeSet>
+    <changeSet id="1634593933909-45" author="Sobolev Kirill">
+        <addUniqueConstraint columnNames="vote_id" constraintName="uc_topics_votes_vote" tableName="topics_votes"/>
+    </changeSet>
+    <changeSet id="1634593933909-46" author="Sobolev Kirill">
+        <addUniqueConstraint columnNames="email" constraintName="uc_users_email" tableName="users"/>
+    </changeSet>
+    <changeSet id="1634593933909-47" author="Sobolev Kirill">
+        <addUniqueConstraint columnNames="username" constraintName="uc_users_username" tableName="users"/>
+    </changeSet>
+
+
+    <!--    создание связей по внешнему ключу -->
+    <changeSet id="1634593933909-48" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="main_comment_id" baseTableName="comments"
+                                 constraintName="FK_COMMENTS_ON_MAIN_COMMENT" referencedColumnNames="id"
+                                 referencedTableName="comments"/>
+    </changeSet>
+    <changeSet id="1634593933909-49" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="topic_id" baseTableName="comments"
+                                 constraintName="FK_COMMENTS_ON_TOPIC" referencedColumnNames="id"
+                                 referencedTableName="topics"/>
+    </changeSet>
+    <changeSet id="1634593933909-50" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="comments" constraintName="FK_COMMENTS_ON_USER"
+                                 referencedColumnNames="id" referencedTableName="users"/>
+    </changeSet>
+    <changeSet id="1634593933909-51" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="company_rating_id" baseTableName="companies"
+                                 constraintName="FK_COMPANIES_ON_COMPANY_RATING" referencedColumnNames="id"
+                                 referencedTableName="rating"/>
+    </changeSet>
+    <changeSet id="1634593933909-52" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="user_activity_id" baseTableName="karma"
+                                 constraintName="FK_KARMA_ON_USER_ACTIVITY" referencedColumnNames="id"
+                                 referencedTableName="user_activities"/>
+    </changeSet>
+    <changeSet id="1634593933909-53" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="address_id" baseTableName="profiles"
+                                 constraintName="FK_PROFILES_ON_ADDRESS" referencedColumnNames="id"
+                                 referencedTableName="addresses"/>
+    </changeSet>
+    <changeSet id="1634593933909-54" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="profiles" constraintName="FK_PROFILES_ON_USER"
+                                 referencedColumnNames="id" referencedTableName="users"/>
+    </changeSet>
+    <changeSet id="1634593933909-55" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="user_company_id" baseTableName="profiles"
+                                 constraintName="FK_PROFILES_ON_USER_COMPANY" referencedColumnNames="id"
+                                 referencedTableName="companies"/>
+    </changeSet>
+    <changeSet id="1634593933909-56" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="user_activity_id" baseTableName="rating"
+                                 constraintName="FK_RATING_ON_USER_ACTIVITY" referencedColumnNames="id"
+                                 referencedTableName="user_activities"/>
+    </changeSet>
+    <changeSet id="1634593933909-57" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="negative_votes" baseTableName="users"
+                                 constraintName="FK_USERS_ON_NEGATIVE_VOTES" referencedColumnNames="id"
+                                 referencedTableName="comments"/>
+    </changeSet>
+    <changeSet id="1634593933909-58" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="positive_votes" baseTableName="users"
+                                 constraintName="FK_USERS_ON_POSITIVE_VOTES" referencedColumnNames="id"
+                                 referencedTableName="comments"/>
+    </changeSet>
+    <changeSet id="1634593933909-59" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="user_activities"
+                                 constraintName="FK_USER_ACTIVITIES_ON_USER" referencedColumnNames="id"
+                                 referencedTableName="users"/>
+    </changeSet>
+    <changeSet id="1634593933909-60" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="badge_id" baseTableName="badge_users"
+                                 constraintName="fk_baduse_on_badge" referencedColumnNames="id"
+                                 referencedTableName="badges"/>
+    </changeSet>
+    <changeSet id="1634593933909-61" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="users_id" baseTableName="badge_users"
+                                 constraintName="fk_baduse_on_user" referencedColumnNames="id"
+                                 referencedTableName="users"/>
+    </changeSet>
+    <changeSet id="1634593933909-62" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="company_id" baseTableName="company_admins"
+                                 constraintName="fk_comadm_on_company" referencedColumnNames="id"
+                                 referencedTableName="companies"/>
+    </changeSet>
+    <changeSet id="1634593933909-63" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="company_admins"
+                                 constraintName="fk_comadm_on_user" referencedColumnNames="id"
+                                 referencedTableName="users"/>
+    </changeSet>
+    <changeSet id="1634593933909-64" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="company_id" baseTableName="company_blog"
+                                 constraintName="fk_comblo_on_company" referencedColumnNames="id"
+                                 referencedTableName="companies"/>
+    </changeSet>
+    <changeSet id="1634593933909-65" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="topic_id" baseTableName="company_blog"
+                                 constraintName="fk_comblo_on_topic" referencedColumnNames="id"
+                                 referencedTableName="topics"/>
+    </changeSet>
+    <changeSet id="1634593933909-66" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="company_id" baseTableName="company_followers"
+                                 constraintName="fk_comfol_on_company" referencedColumnNames="id"
+                                 referencedTableName="companies"/>
+    </changeSet>
+    <changeSet id="1634593933909-67" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="follower_id" baseTableName="company_followers"
+                                 constraintName="fk_comfol_on_user" referencedColumnNames="id"
+                                 referencedTableName="users"/>
+    </changeSet>
+    <changeSet id="1634593933909-68" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="company_id" baseTableName="company_hubs"
+                                 constraintName="fk_comhub_on_company" referencedColumnNames="id"
+                                 referencedTableName="companies"/>
+    </changeSet>
+    <changeSet id="1634593933909-69" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="hub_id" baseTableName="company_hubs" constraintName="fk_comhub_on_hub"
+                                 referencedColumnNames="id" referencedTableName="hubs"/>
+    </changeSet>
+    <changeSet id="1634593933909-70" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="company_id" baseTableName="company_moderators"
+                                 constraintName="fk_commod_on_company" referencedColumnNames="id"
+                                 referencedTableName="companies"/>
+    </changeSet>
+    <changeSet id="1634593933909-71" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="company_moderators"
+                                 constraintName="fk_commod_on_user" referencedColumnNames="id"
+                                 referencedTableName="users"/>
+    </changeSet>
+    <changeSet id="1634593933909-72" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="company_id" baseTableName="company_company_contacts"
+                                 constraintName="fk_company_companycontacts_on_company" referencedColumnNames="id"
+                                 referencedTableName="companies"/>
+    </changeSet>
+    <changeSet id="1634593933909-73" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="company_id" baseTableName="company_tags"
+                                 constraintName="fk_comtag_on_company" referencedColumnNames="id"
+                                 referencedTableName="companies"/>
+    </changeSet>
+    <changeSet id="1634593933909-74" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="tag_id" baseTableName="company_tags" constraintName="fk_comtag_on_tag"
+                                 referencedColumnNames="id" referencedTableName="tags"/>
+    </changeSet>
+    <changeSet id="1634593933909-75" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="hub_id" baseTableName="hubs_tags" constraintName="fk_hubs_tags_on_hub"
+                                 referencedColumnNames="id" referencedTableName="hubs"/>
+    </changeSet>
+    <changeSet id="1634593933909-76" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="tag_id" baseTableName="hubs_tags" constraintName="fk_hubs_tags_on_tag"
+                                 referencedColumnNames="id" referencedTableName="tags"/>
+    </changeSet>
+    <changeSet id="1634593933909-77" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="hub_id" baseTableName="hubs_topics" constraintName="fk_hubtop_on_hub"
+                                 referencedColumnNames="id" referencedTableName="hubs"/>
+    </changeSet>
+    <changeSet id="1634593933909-78" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="topic_id" baseTableName="hubs_topics"
+                                 constraintName="fk_hubtop_on_topic" referencedColumnNames="id"
+                                 referencedTableName="topics"/>
+    </changeSet>
+    <changeSet id="1634593933909-79" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="profile_id" baseTableName="profile_contact_info"
+                                 constraintName="fk_profile_contactinfo_on_profile" referencedColumnNames="id"
+                                 referencedTableName="profiles"/>
+    </changeSet>
+    <changeSet id="1634593933909-80" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="profile_id" baseTableName="profile_specialization"
+                                 constraintName="fk_profile_specialization_on_profile" referencedColumnNames="id"
+                                 referencedTableName="profiles"/>
+    </changeSet>
+    <changeSet id="1634593933909-81" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="authority_id" baseTableName="roles_authorities"
+                                 constraintName="fk_rolaut_on_authority" referencedColumnNames="id"
+                                 referencedTableName="authorities"/>
+    </changeSet>
+    <changeSet id="1634593933909-82" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="role_id" baseTableName="roles_authorities"
+                                 constraintName="fk_rolaut_on_role" referencedColumnNames="id"
+                                 referencedTableName="roles"/>
+    </changeSet>
+    <changeSet id="1634593933909-83" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="company_id" baseTableName="speakers_companies"
+                                 constraintName="fk_specom_on_company" referencedColumnNames="id"
+                                 referencedTableName="companies"/>
+    </changeSet>
+    <changeSet id="1634593933909-84" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="profile_id" baseTableName="speakers_companies"
+                                 constraintName="fk_specom_on_profile" referencedColumnNames="id"
+                                 referencedTableName="profiles"/>
+    </changeSet>
+    <changeSet id="1634593933909-85" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="tag_id" baseTableName="tags_topics" constraintName="fk_tagtop_on_tag"
+                                 referencedColumnNames="id" referencedTableName="tags"/>
+    </changeSet>
+    <changeSet id="1634593933909-86" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="topic_id" baseTableName="tags_topics"
+                                 constraintName="fk_tagtop_on_topic" referencedColumnNames="id"
+                                 referencedTableName="topics"/>
+    </changeSet>
+    <changeSet id="1634593933909-87" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="topic_id" baseTableName="topics_authors"
+                                 constraintName="fk_topaut_on_topic" referencedColumnNames="id"
+                                 referencedTableName="topics"/>
+    </changeSet>
+    <changeSet id="1634593933909-88" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="authors_id" baseTableName="topics_authors"
+                                 constraintName="fk_topaut_on_user" referencedColumnNames="id"
+                                 referencedTableName="users"/>
+    </changeSet>
+    <changeSet id="1634593933909-89" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="topic_id" baseTableName="topics_views"
+                                 constraintName="fk_topvie_on_topic" referencedColumnNames="id"
+                                 referencedTableName="topics"/>
+    </changeSet>
+    <changeSet id="1634593933909-90" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="views_id" baseTableName="topics_views"
+                                 constraintName="fk_topvie_on_user" referencedColumnNames="id"
+                                 referencedTableName="users"/>
+    </changeSet>
+    <changeSet id="1634593933909-91" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="topic_id" baseTableName="topics_votes"
+                                 constraintName="fk_topvot_on_topic" referencedColumnNames="id"
+                                 referencedTableName="topics"/>
+    </changeSet>
+    <changeSet id="1634593933909-92" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="vote_id" baseTableName="topics_votes"
+                                 constraintName="fk_topvot_on_user" referencedColumnNames="id"
+                                 referencedTableName="users"/>
+    </changeSet>
+    <changeSet id="1634593933909-93" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="bookmark_id" baseTableName="users_bookmarks"
+                                 constraintName="fk_useboo_on_bookmark" referencedColumnNames="id"
+                                 referencedTableName="topics"/>
+    </changeSet>
+    <changeSet id="1634593933909-94" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="users_bookmarks"
+                                 constraintName="fk_useboo_on_user" referencedColumnNames="id"
+                                 referencedTableName="topics"/>
+    </changeSet>
+    <changeSet id="1634593933909-95" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="follower_company_id" baseTableName="users_companies_follower"
+                                 constraintName="fk_usecomfol_on_company" referencedColumnNames="id"
+                                 referencedTableName="companies"/>
+    </changeSet>
+    <changeSet id="1634593933909-96" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="profile_id" baseTableName="users_companies_follower"
+                                 constraintName="fk_usecomfol_on_profile" referencedColumnNames="id"
+                                 referencedTableName="profiles"/>
+    </changeSet>
+    <changeSet id="1634593933909-97" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="users_contributions"
+                                 constraintName="fk_usecon_on_hub" referencedColumnNames="id"
+                                 referencedTableName="hubs"/>
+    </changeSet>
+    <changeSet id="1634593933909-98" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="contribution_id" baseTableName="users_contributions"
+                                 constraintName="fk_usecon_on_user" referencedColumnNames="id"
+                                 referencedTableName="users"/>
+    </changeSet>
+    <changeSet id="1634593933909-99" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="follower_id" baseTableName="users_followers"
+                                 constraintName="fk_usefol_on_follower" referencedColumnNames="id"
+                                 referencedTableName="users"/>
+    </changeSet>
+    <changeSet id="1634593933909-100" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="following_id" baseTableName="users_followings"
+                                 constraintName="fk_usefol_on_following" referencedColumnNames="id"
+                                 referencedTableName="users"/>
+    </changeSet>
+    <changeSet id="1634593933909-101" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="users_followings"
+                                 constraintName="fk_usefol_on_user" referencedColumnNames="id"
+                                 referencedTableName="users"/>
+    </changeSet>
+    <changeSet id="1634593933909-102" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="users_followers"
+                                 constraintName="fk_usefol_on_usero5eNv6" referencedColumnNames="id"
+                                 referencedTableName="users"/>
+    </changeSet>
+    <changeSet id="1634593933909-103" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="users_hubs" constraintName="fk_usehub_on_hub"
+                                 referencedColumnNames="id" referencedTableName="hubs"/>
+    </changeSet>
+    <changeSet id="1634593933909-104" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="hubs_id" baseTableName="users_hubs" constraintName="fk_usehub_on_user"
+                                 referencedColumnNames="id" referencedTableName="users"/>
+    </changeSet>
+    <changeSet id="1634593933909-105" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="invited_user_id" baseTableName="users_invited"
+                                 constraintName="fk_useinv_on_invited_user" referencedColumnNames="id"
+                                 referencedTableName="users"/>
+    </changeSet>
+    <changeSet id="1634593933909-106" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="users_invited"
+                                 constraintName="fk_useinv_on_user" referencedColumnNames="id"
+                                 referencedTableName="users"/>
+    </changeSet>
+    <changeSet id="1634593933909-107" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="role_id" baseTableName="user_roles" constraintName="fk_userol_on_role"
+                                 referencedColumnNames="id" referencedTableName="roles"/>
+    </changeSet>
+    <changeSet id="1634593933909-108" author="Sobolev Kirill">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="user_roles" constraintName="fk_userol_on_user"
+                                 referencedColumnNames="id" referencedTableName="users"/>
+    </changeSet>
+
+</databaseChangeLog>

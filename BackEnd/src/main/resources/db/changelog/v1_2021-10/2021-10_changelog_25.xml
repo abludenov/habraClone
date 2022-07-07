@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1634593933909-30" author="Sobolev Kirill">
+        <createTable tableName="user_activities">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_user_activities"/>
+            </column>
+            <column name="activity_date_time" type="DATETIME"/>
+            <column name="is_change_up" type="BOOLEAN"/>
+            <column name="user_id" type="BIGINT"/>
+        </createTable>
+        <rollback>
+            <dropTable tableName="user_activities"/>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>

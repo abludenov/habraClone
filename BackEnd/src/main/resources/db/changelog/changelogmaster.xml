@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+    <include file="db/changelog/v1_2021-10/2021-10_changelog_21.xml"/>
+    <include file="db/changelog/v1_2021-10/2021-10_changelog_22.xml"/>
+    <include file="db/changelog/v1_2021-10/2021-10_changelog_23.xml"/>
+    <include file="db/changelog/v1_2021-10/2021-10_changelog_24.xml"/>
+    <include file="db/changelog/v1_2021-10/2021-10_changelog_25.xml"/>
+    <include file="db/changelog/v1_2021-10/2021-10_changelog_26.xml"/>
+    <include file="db/changelog/v1_2021-10/2021-10_changelog_27.xml"/>
+    <include file="db/changelog/v1_2021-10/2021-10_changelog_28.xml"/>
+    <include file="db/changelog/v1_2021-10/2021-10_changelog_29.xml"/>
+    <include file="db/changelog/v1_2021-10/2021-10_changelog_30.xml"/>
+    <include file="db/changelog/v1_2021-10/2021-10_changelog_31.xml"/>
+    <include file="db/changelog/v1_2021-10/2021-10_changelog_32.xml"/>
+    <include file="db/changelog/v1_2021-10/2021-10_changelog_33.xml"/>
+    <include file="db/changelog/v1_2021-10/2021-10_changelog_34.xml"/>
+    <include file="db/changelog/v1_2021-10/2021-10_changelog_39.xml"/>
+    <include file="db/scripts/v1_2021-10/21_change_log_script.sql"/>
+    <include file="db/scripts/v1_2021-10/22_change_log_script.sql"/>
+    <include file="db/scripts/v1_2021-10/23_change_log_script.sql"/>
+    <include file="db/scripts/v1_2021-10/24_change_log_script.sql"/>
+    <include file="db/scripts/v1_2021-10/25_change_log_script.sql"/>
+    <include file="db/scripts/v1_2021-10/26_change_log_script.sql"/>
+    <include file="db/scripts/v1_2021-10/27_change_log_script.sql"/>
+    <include file="db/scripts/v1_2021-10/28_change_log_script.sql"/>
+    <include file="db/scripts/v1_2021-10/29_change_log_script.sql"/>
+    <include file="db/scripts/v1_2021-10/30_change_log_script.sql"/>
+    <include file="db/scripts/v1_2021-10/31_change_log_script.sql"/>
+    <include file="db/scripts/v1_2021-10/32_change_log_script.sql"/>
+    <include file="db/scripts/v1_2021-10/33_change_log_script.sql"/>
+    <include file="db/scripts/v1_2021-10/34_change_log_script.sql"/>
+    <include file="db/scripts/v1_2021-10/39_change_log_script.sql"/>
+    <include file="db/changelog/v2_2021-10/2021-10_changelog_54.xml"/>
+    <include file="db/scripts/v2_2021-10/54_change_log_script.sql"/>
+    <include file="db/changelog/v3_2021-10/2021-10_changelog_47.xml"/>
+    <include file="db/scripts/v3_2021-10/47_change_log_script.sql"/>
+    <include file="db/scripts/v4_2021-10/57_change_log_script.sql"/>
+    <include file="db/scripts/v5_2021-10/58_change_log_script.sql"/>
+    <include file="db/changelog/v4_2021_11/2021-11_changelog_48.xml"/>
+    <include file="db/scripts/v4_2021-10/48_change_log_script.sql"/>
+    <include file="db/changelog/v5_2021-11/2021-11_changelog_40.xml"/>
+    <include file="db/changelog/v5_2021-11/2021-11_changelog_66.xml"/>
+    <include file="db/scripts/v6_2021-10/66-1_changelog_script.sql"/>
+    <include file="db/scripts/v6_2021-10/66-2_changelog_script.sql"/>
+    <include file="db/scripts/v6_2021-11/59_change_log_script.sql"/>
+    <include file="db/changelog/v5_2021-11/2021-11_changelog_55.xml"/>
+    <include file="db/scripts/v6_2021-10/55_change_log_script.sql"/>
+    <include file="db/changelog/v8_2021-11/2021-11_changelog_70.xml"/>
+    <include file="db/changelog/v7_2021-11/2021-11_changelog_53.xml"/>
+    <include file="db/changelog/v9_2021-11/2021-11_changelog_74.xml"/>
+    <include file="db/scripts/v6_2021-11/63_change_log_script.sql"/>
+    <include file="db/scripts/v6_2021-11/44_change_log_script.sql"/>
+</databaseChangeLog>

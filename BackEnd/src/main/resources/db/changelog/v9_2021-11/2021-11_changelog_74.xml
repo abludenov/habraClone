@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1636720651458-1" author="Irene (generated)">
+        <setTableRemarks tableName="activity_types"/>
+    </changeSet>
+    <changeSet id="1636720651458-2" author="Irene (generated)">
+        <setTableRemarks tableName="addresses"/>
+    </changeSet>
+    <changeSet id="1636720651458-3" author="Irene (generated)">
+        <setTableRemarks tableName="authorities"/>
+    </changeSet>
+    <changeSet id="1636720651458-4" author="Irene (generated)">
+        <setTableRemarks tableName="badge_users"/>
+    </changeSet>
+    <changeSet id="1636720651458-5" author="Irene (generated)">
+        <setTableRemarks tableName="badges"/>
+    </changeSet>
+    <changeSet id="1636720651458-6" author="Irene (generated)">
+        <setTableRemarks tableName="comments"/>
+    </changeSet>
+    <changeSet id="1636720651458-7" author="Irene (generated)">
+        <setTableRemarks tableName="comments_negative_votes"/>
+    </changeSet>
+    <changeSet id="1636720651458-8" author="Irene (generated)">
+        <setTableRemarks tableName="comments_positive_votes"/>
+    </changeSet>
+    <changeSet id="1636720651458-9" author="Irene (generated)">
+        <setTableRemarks tableName="companies"/>
+    </changeSet>
+    <changeSet id="1636720651458-10" author="Irene (generated)">
+        <setTableRemarks tableName="company_admins"/>
+    </changeSet>
+    <changeSet id="1636720651458-11" author="Irene (generated)">
+        <setTableRemarks tableName="company_blog"/>
+    </changeSet>
+    <changeSet id="1636720651458-12" author="Irene (generated)">
+        <setTableRemarks tableName="company_company_contacts"/>
+    </changeSet>
+    <changeSet id="1636720651458-13" author="Irene (generated)">
+        <setTableRemarks tableName="company_followers"/>
+    </changeSet>
+    <changeSet id="1636720651458-14" author="Irene (generated)">
+        <setTableRemarks tableName="company_hubs"/>
+    </changeSet>
+    <changeSet id="1636720651458-15" author="Irene (generated)">
+        <setTableRemarks tableName="company_moderators"/>
+    </changeSet>
+    <changeSet id="1636720651458-16" author="Irene (generated)">
+        <setTableRemarks tableName="company_tags"/>
+    </changeSet>
+    <changeSet id="1636720651458-17" author="Irene (generated)">
+        <setTableRemarks tableName="hubs"/>
+    </changeSet>
+    <changeSet id="1636720651458-18" author="Irene (generated)">
+        <setTableRemarks tableName="hubs_tags"/>
+    </changeSet>
+    <changeSet id="1636720651458-19" author="Irene (generated)">
+        <setTableRemarks tableName="hubs_topics"/>
+    </changeSet>
+    <changeSet id="1636720651458-20" author="Irene (generated)">
+        <setTableRemarks tableName="karma"/>
+    </changeSet>
+    <changeSet id="1636720651458-21" author="Irene (generated)">
+        <setTableRemarks tableName="profile_contact_info"/>
+    </changeSet>
+    <changeSet id="1636720651458-22" author="Irene (generated)">
+        <setTableRemarks tableName="profile_specialization"/>
+    </changeSet>
+    <changeSet id="1636720651458-23" author="Irene (generated)">
+        <setTableRemarks tableName="profiles"/>
+    </changeSet>
+    <changeSet id="1636720651458-24" author="Irene (generated)">
+        <setTableRemarks tableName="rating"/>
+    </changeSet>
+    <changeSet id="1636720651458-25" author="Irene (generated)">
+        <setTableRemarks tableName="roles"/>
+    </changeSet>
+    <changeSet id="1636720651458-26" author="Irene (generated)">
+        <setTableRemarks tableName="roles_authorities"/>
+    </changeSet>
+    <changeSet id="1636720651458-27" author="Irene (generated)">
+        <setTableRemarks tableName="speakers_companies"/>
+    </changeSet>
+    <changeSet id="1636720651458-28" author="Irene (generated)">
+        <setTableRemarks tableName="tags"/>
+    </changeSet>
+    <changeSet id="1636720651458-29" author="Irene (generated)">
+        <setTableRemarks tableName="tags_topics"/>
+    </changeSet>
+    <changeSet id="1636720651458-30" author="Irene (generated)">
+        <setTableRemarks tableName="topics"/>
+    </changeSet>
+    <changeSet id="1636720651458-31" author="Irene (generated)">
+        <setTableRemarks tableName="topics_authors"/>
+    </changeSet>
+    <changeSet id="1636720651458-32" author="Irene (generated)">
+        <setTableRemarks tableName="topics_views"/>
+    </changeSet>
+    <changeSet id="1636720651458-33" author="Irene (generated)">
+        <setTableRemarks tableName="topics_votes"/>
+    </changeSet>
+    <changeSet id="1636720651458-34" author="Irene (generated)">
+        <setTableRemarks tableName="user_activities"/>
+    </changeSet>
+    <changeSet id="1636720651458-35" author="Irene (generated)">
+        <setTableRemarks tableName="user_roles"/>
+    </changeSet>
+    <changeSet id="1636720651458-36" author="Irene (generated)">
+        <setTableRemarks tableName="users"/>
+    </changeSet>
+    <changeSet id="1636720651458-37" author="Irene (generated)">
+        <setTableRemarks tableName="users_bookmarks"/>
+    </changeSet>
+    <changeSet id="1636720651458-38" author="Irene (generated)">
+        <setTableRemarks tableName="users_contributions"/>
+    </changeSet>
+    <changeSet id="1636720651458-39" author="Irene (generated)">
+        <setTableRemarks tableName="users_followers"/>
+    </changeSet>
+    <changeSet id="1636720651458-40" author="Irene (generated)">
+        <setTableRemarks tableName="users_followings"/>
+    </changeSet>
+    <changeSet id="1636720651458-41" author="Irene (generated)">
+        <setTableRemarks tableName="users_hubs"/>
+    </changeSet>
+    <changeSet id="1636720651458-42" author="Irene (generated)">
+        <setTableRemarks tableName="users_invited"/>
+    </changeSet>
+    <changeSet id="1636720651458-43" author="Irene (generated)">
+        <setColumnRemarks columnName="about_company" tableName="companies"/>
+    </changeSet>
+    <changeSet id="1636720651458-44" author="Irene (generated)">
+        <setColumnRemarks columnName="about_user" tableName="profiles"/>
+    </changeSet>
+    <changeSet id="1636720651458-45" author="Irene (generated)">
+        <setColumnRemarks columnName="activity_date_time" tableName="user_activities"/>
+    </changeSet>
+    <changeSet id="1636720651458-46" author="Irene (generated)">
+        <setColumnRemarks columnName="actual_name" tableName="profiles"/>
+    </changeSet>
+    <changeSet id="1636720651458-47" author="Irene (generated)">
+        <setColumnRemarks columnName="address_id" tableName="profiles"/>
+    </changeSet>
+    <changeSet id="1636720651458-48" author="Irene (generated)">
+        <setColumnRemarks columnName="avatar" tableName="profiles"/>
+    </changeSet>
+    <changeSet id="1636720651458-49" author="Irene (generated)">
+        <setColumnRemarks columnName="birth_day" tableName="profiles"/>
+    </changeSet>
+    <changeSet id="1636720651458-50" author="Irene (generated)">
+        <setColumnRemarks columnName="change_coefficient" tableName="activity_types"/>
+    </changeSet>
+    <changeSet id="1636720651458-51" author="Irene (generated)">
+        <setColumnRemarks columnName="city" tableName="addresses"/>
+    </changeSet>
+    <changeSet id="1636720651458-52" author="Irene (generated)">
+        <setColumnRemarks columnName="company_avatar" tableName="companies"/>
+    </changeSet>
+    <changeSet id="1636720651458-53" author="Irene (generated)">
+        <setColumnRemarks columnName="company_name" tableName="companies"/>
+    </changeSet>
+    <changeSet id="1636720651458-54" author="Irene (generated)">
+        <setColumnRemarks columnName="company_rating_id" tableName="companies"/>
+    </changeSet>
+    <changeSet id="1636720651458-55" author="Irene (generated)">
+        <setColumnRemarks columnName="company_scale" tableName="companies"/>
+    </changeSet>
+    <changeSet id="1636720651458-56" author="Irene (generated)">
+        <setColumnRemarks columnName="company_site" tableName="companies"/>
+    </changeSet>
+    <changeSet id="1636720651458-57" author="Irene (generated)">
+        <setColumnRemarks columnName="content" tableName="comments"/>
+    </changeSet>
+    <changeSet id="1636720651458-58" author="Irene (generated)">
+        <setColumnRemarks columnName="content" tableName="topics"/>
+    </changeSet>
+    <changeSet id="1636720651458-59" author="Irene (generated)">
+        <setColumnRemarks columnName="country" tableName="addresses"/>
+    </changeSet>
+    <changeSet id="1636720651458-60" author="Irene (generated)">
+        <setColumnRemarks columnName="edited_user_id" tableName="karma"/>
+    </changeSet>
+    <changeSet id="1636720651458-61" author="Irene (generated)">
+        <setColumnRemarks columnName="editor_user_id" tableName="karma"/>
+    </changeSet>
+    <changeSet id="1636720651458-62" author="Irene (generated)">
+        <setColumnRemarks columnName="email" tableName="users"/>
+    </changeSet>
+    <changeSet id="1636720651458-63" author="Irene (generated)">
+        <setColumnRemarks columnName="gender" tableName="profiles"/>
+    </changeSet>
+    <changeSet id="1636720651458-64" author="Irene (generated)">
+        <setColumnRemarks columnName="icon" tableName="badges"/>
+    </changeSet>
+    <changeSet id="1636720651458-65" author="Irene (generated)">
+        <setColumnRemarks columnName="icon" tableName="hubs"/>
+    </changeSet>
+    <changeSet id="1636720651458-66" author="Irene (generated)">
+        <setColumnRemarks columnName="id" tableName="addresses"/>
+    </changeSet>
+    <changeSet id="1636720651458-67" author="Irene (generated)">
+        <setColumnRemarks columnName="id" tableName="authorities"/>
+    </changeSet>
+    <changeSet id="1636720651458-68" author="Irene (generated)">
+        <setColumnRemarks columnName="id" tableName="badges"/>
+    </changeSet>
+    <changeSet id="1636720651458-69" author="Irene (generated)">
+        <setColumnRemarks columnName="id" tableName="comments"/>
+    </changeSet>
+    <changeSet id="1636720651458-70" author="Irene (generated)">
+        <setColumnRemarks columnName="id" tableName="companies"/>
+    </changeSet>
+    <changeSet id="1636720651458-71" author="Irene (generated)">
+        <setColumnRemarks columnName="id" tableName="hubs"/>
+    </changeSet>
+    <changeSet id="1636720651458-72" author="Irene (generated)">
+        <setColumnRemarks columnName="id" tableName="karma"/>
+    </changeSet>
+    <changeSet id="1636720651458-73" author="Irene (generated)">
+        <setColumnRemarks columnName="id" tableName="profiles"/>
+    </changeSet>
+    <changeSet id="1636720651458-74" author="Irene (generated)">
+        <setColumnRemarks columnName="id" tableName="rating"/>
+    </changeSet>
+    <changeSet id="1636720651458-75" author="Irene (generated)">
+        <setColumnRemarks columnName="id" tableName="roles"/>
+    </changeSet>
+    <changeSet id="1636720651458-76" author="Irene (generated)">
+        <setColumnRemarks columnName="id" tableName="tags"/>
+    </changeSet>
+    <changeSet id="1636720651458-77" author="Irene (generated)">
+        <setColumnRemarks columnName="id" tableName="topics"/>
+    </changeSet>
+    <changeSet id="1636720651458-78" author="Irene (generated)">
+        <setColumnRemarks columnName="id" tableName="user_activities"/>
+    </changeSet>
+    <changeSet id="1636720651458-79" author="Irene (generated)">
+        <setColumnRemarks columnName="id" tableName="users"/>
+    </changeSet>
+    <changeSet id="1636720651458-80" author="Irene (generated)">
+        <setColumnRemarks columnName="is_change_up" tableName="user_activities"/>
+    </changeSet>
+    <changeSet id="1636720651458-81" author="Irene (generated)">
+        <setColumnRemarks columnName="is_enabled" tableName="companies"/>
+    </changeSet>
+    <changeSet id="1636720651458-82" author="Irene (generated)">
+        <setColumnRemarks columnName="is_enabled" tableName="users"/>
+    </changeSet>
+    <changeSet id="1636720651458-83" author="Irene (generated)">
+        <setColumnRemarks columnName="is_moderate" tableName="comments"/>
+    </changeSet>
+    <changeSet id="1636720651458-84" author="Irene (generated)">
+        <setColumnRemarks columnName="is_removed" tableName="comments"/>
+    </changeSet>
+    <changeSet id="1636720651458-85" author="Irene (generated)">
+        <setColumnRemarks columnName="main_comment_id" tableName="comments"/>
+    </changeSet>
+    <changeSet id="1636720651458-86" author="Irene (generated)">
+        <setColumnRemarks columnName="name" tableName="authorities"/>
+    </changeSet>
+    <changeSet id="1636720651458-87" author="Irene (generated)">
+        <setColumnRemarks columnName="password" tableName="users"/>
+    </changeSet>
+    <changeSet id="1636720651458-88" author="Irene (generated)">
+        <setColumnRemarks columnName="published" tableName="comments"/>
+    </changeSet>
+    <changeSet id="1636720651458-89" author="Irene (generated)">
+        <setColumnRemarks columnName="published" tableName="topics"/>
+    </changeSet>
+    <changeSet id="1636720651458-90" author="Irene (generated)">
+        <setColumnRemarks columnName="reason" tableName="karma"/>
+    </changeSet>
+    <changeSet id="1636720651458-91" author="Irene (generated)">
+        <setColumnRemarks columnName="reason" tableName="rating"/>
+    </changeSet>
+    <changeSet id="1636720651458-92" author="Irene (generated)">
+        <setColumnRemarks columnName="region" tableName="addresses"/>
+    </changeSet>
+    <changeSet id="1636720651458-93" author="Irene (generated)">
+        <setColumnRemarks columnName="registered_date" tableName="profiles"/>
+    </changeSet>
+    <changeSet id="1636720651458-94" author="Irene (generated)">
+        <setColumnRemarks columnName="roles_names" tableName="roles"/>
+    </changeSet>
+    <changeSet id="1636720651458-95" author="Irene (generated)">
+        <setColumnRemarks columnName="title" tableName="badges"/>
+    </changeSet>
+    <changeSet id="1636720651458-96" author="Irene (generated)">
+        <setColumnRemarks columnName="title" tableName="hubs"/>
+    </changeSet>
+    <changeSet id="1636720651458-97" author="Irene (generated)">
+        <setColumnRemarks columnName="title" tableName="tags"/>
+    </changeSet>
+    <changeSet id="1636720651458-98" author="Irene (generated)">
+        <setColumnRemarks columnName="title" tableName="topics"/>
+    </changeSet>
+    <changeSet id="1636720651458-99" author="Irene (generated)">
+        <setColumnRemarks columnName="topic_id" tableName="comments"/>
+    </changeSet>
+    <changeSet id="1636720651458-100" author="Irene (generated)">
+        <setColumnRemarks columnName="type" tableName="activity_types"/>
+    </changeSet>
+    <changeSet id="1636720651458-101" author="Irene (generated)">
+        <setColumnRemarks columnName="user_activity_id" tableName="rating"/>
+    </changeSet>
+    <changeSet id="1636720651458-102" author="Irene (generated)">
+        <setColumnRemarks columnName="user_company_id" tableName="profiles"/>
+    </changeSet>
+    <changeSet id="1636720651458-103" author="Irene (generated)">
+        <setColumnRemarks columnName="user_id" tableName="comments"/>
+    </changeSet>
+    <changeSet id="1636720651458-104" author="Irene (generated)">
+        <setColumnRemarks columnName="user_id" tableName="profiles"/>
+    </changeSet>
+    <changeSet id="1636720651458-105" author="Irene (generated)">
+        <setColumnRemarks columnName="user_id" tableName="user_activities"/>
+    </changeSet>
+    <changeSet id="1636720651458-106" author="Irene (generated)">
+        <setColumnRemarks columnName="username" tableName="users"/>
+    </changeSet>
+    <changeSet id="1636720651458-107" author="Irene (generated)">
+        <setColumnRemarks columnName="utr_number" tableName="companies"/>
+    </changeSet>
+    <changeSet id="1636720651458-108" author="Irene (generated)">
+        <setColumnRemarks columnName="value" tableName="karma"/>
+    </changeSet>
+    <changeSet id="1636720651458-109" author="Irene (generated)">
+        <setColumnRemarks columnName="value" tableName="rating"/>
+    </changeSet>
+
+</databaseChangeLog>

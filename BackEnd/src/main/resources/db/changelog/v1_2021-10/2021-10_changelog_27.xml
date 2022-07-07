@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1634593933909-26" author="Sobolev Kirill">
+        <createTable tableName="topics">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_topics"/>
+            </column>
+            <column name="title" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="published" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="content" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <rollback>
+            <dropTable tableName="topics"/>
+        </rollback>
+    </changeSet>
+    <changeSet id="1634593933909-27" author="Sobolev Kirill">
+        <createTable tableName="topics_authors">
+            <column name="authors_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_topics_authors"/>
+            </column>
+            <column name="topic_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_topics_authors"/>
+            </column>
+        </createTable>
+        <rollback>
+            <dropTable tableName="topics_authors"/>
+        </rollback>
+    </changeSet>
+    <changeSet id="1634593933909-28" author="Sobolev Kirill">
+        <createTable tableName="topics_views">
+            <column name="topic_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_topics_views"/>
+            </column>
+            <column name="views_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_topics_views"/>
+            </column>
+        </createTable>
+        <rollback>
+            <dropTable tableName="topics_views"/>
+        </rollback>
+    </changeSet>
+    <changeSet id="1634593933909-29" author="Sobolev Kirill">
+        <createTable tableName="topics_votes">
+            <column name="topic_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="vote_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <rollback>
+            <dropTable tableName="topics_votes"/>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>

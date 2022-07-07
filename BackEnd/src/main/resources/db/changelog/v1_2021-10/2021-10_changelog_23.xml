@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1634593933909-17" author="Sobolev Kirill">
+        <createTable tableName="profile_contact_info">
+            <column name="profile_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="contact_info" type="VARCHAR(255)"/>
+        </createTable>
+        <rollback>
+            <dropTable tableName="profile_contact_info"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="1634593933909-18" author="Sobolev Kirill">
+        <createTable tableName="profile_specialization">
+            <column name="profile_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="specialization" type="VARCHAR(255)"/>
+        </createTable>
+        <rollback>
+            <dropTable tableName="profile_specialization"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="1634593933909-19" author="Sobolev Kirill">
+        <createTable tableName="profiles">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_profiles"/>
+            </column>
+            <column name="avatar" type="BLOB"/>
+            <column name="gender" type="VARCHAR(255)"/>
+            <column name="actual_name" type="VARCHAR(255)"/>
+            <column name="birth_day" type="DATE"/>
+            <column name="about_user" type="VARCHAR(255)"/>
+            <column name="registered_date" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="address_id" type="BIGINT"/>
+            <column name="user_company_id" type="BIGINT"/>
+            <column name="user_id" type="BIGINT"/>
+        </createTable>
+        <rollback>
+            <dropTable tableName="profiles"/>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>

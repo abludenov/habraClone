@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1634593933909-31" author="Sobolev Kirill">
+        <createTable tableName="user_roles">
+            <column name="role_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_user_roles"/>
+            </column>
+            <column name="user_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_user_roles"/>
+            </column>
+        </createTable>
+        <rollback>
+            <dropTable tableName="user_roles"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="1634593933909-32" author="Sobolev Kirill">
+        <createTable tableName="users">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_users"/>
+            </column>
+            <column name="username" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="password" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_enabled" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="positive_votes" type="BIGINT"/>
+            <column name="negative_votes" type="BIGINT"/>
+        </createTable>
+        <rollback>
+            <dropTable tableName="users"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="1634593933909-33" author="Sobolev Kirill">
+        <createTable tableName="users_bookmarks">
+            <column name="bookmark_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_users_bookmarks"/>
+            </column>
+            <column name="user_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_users_bookmarks"/>
+            </column>
+        </createTable>
+        <rollback>
+            <dropTable tableName="users_bookmarks"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="1634593933909-34" author="Sobolev Kirill">
+        <createTable tableName="users_companies_follower">
+            <column name="follower_company_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_users_companies_follower"/>
+            </column>
+            <column name="profile_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_users_companies_follower"/>
+            </column>
+        </createTable>
+        <rollback>
+            <dropTable tableName="users_companies_follower"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="1634593933909-35" author="Sobolev Kirill">
+        <createTable tableName="users_contributions">
+            <column name="contribution_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_users_contributions"/>
+            </column>
+            <column name="user_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_users_contributions"/>
+            </column>
+        </createTable>
+        <rollback>
+            <dropTable tableName="users_contributions"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="1634593933909-36" author="Sobolev Kirill">
+        <createTable tableName="users_followers">
+            <column name="follower_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_users_followers"/>
+            </column>
+            <column name="user_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_users_followers"/>
+            </column>
+        </createTable>
+        <rollback>
+            <dropTable tableName="users_followers"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="1634593933909-37" author="Sobolev Kirill">
+        <createTable tableName="users_followings">
+            <column name="following_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_users_followings"/>
+            </column>
+            <column name="user_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_users_followings"/>
+            </column>
+        </createTable>
+        <rollback>
+            <dropTable tableName="users_followings"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="1634593933909-38" author="Sobolev Kirill">
+        <createTable tableName="users_hubs">
+            <column name="hubs_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_users_hubs"/>
+            </column>
+            <column name="user_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_users_hubs"/>
+            </column>
+        </createTable>
+        <rollback>
+            <dropTable tableName="users_hubs"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="1634593933909-39" author="Sobolev Kirill">
+        <createTable tableName="users_invited">
+            <column name="invited_user_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_users_invited"/>
+            </column>
+            <column name="user_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_users_invited"/>
+            </column>
+        </createTable>
+        <rollback>
+            <dropTable tableName="users_invited"/>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>
